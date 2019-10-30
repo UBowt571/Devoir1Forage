@@ -10,8 +10,8 @@ L'exercice consiste à étudier un article dans lequel un nouveau calcul pour l'
 
 Pour modifier Weka (y ajouter un algorithme : un nouveau ID3), il faut le recompiler. Je conseille d'utiliser une distribution issue de Debian pour profiter du célèbre "apt". Cependant, j'ai un ordinateur sous Windows.  
 J'ai donc utilisé ["Windows Subsystem for Linux"](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux "Wikipedia vers WSL") qui permet de bénéfier de "apt" avec une distro Ubuntu sous Windows 10.
-#### 1 : [Recompiler Weka](/UBowt571/Devoir1Forage/blob/master/README.md#1--recompiler-weka-)
-#### 2 : [Installer ant sous WSL](/UBowt571/Devoir1Forage/blob/master/README.md#2--installer-ant-sous-wsl-)
+#### 1 : [Recompiler Weka](#1--recompiler-weka-)
+#### 2 : [Installer ant sous WSL](#2--installer-ant-sous-wsl-)
 #### 3 : Debugger Weka avec Eclipse
 
 # 1 : Recompiler Weka :
