@@ -47,8 +47,23 @@ Ensuite, ouvrez Ubuntu, répondez aux quelques questions (création de l'utilisa
 Un fois le compte créé, tapez les commandes :
 * `sudo apt-get update`
 * `sudo apt-get install defaultjdk ant`  
+
 Si tout s'est bien déroulé, ant est installé sur votre Ubuntu (et java qui est nécessaire pour la compilation).  
 Vous pouvez utiliser le petit script `run_weka.bat` à placer dans votre dossier `TEMP` pour automatiser la compilation :  
 * Il compile Weka
 * Arrête Weka s'il tournait déjà
 * Lance la nouvelle version de Weka  
+
+# 3 : Debugger Weka avec Eclipse  
+Pour faciliter le développement, il est souvent utile d'avoir un debugger disponible. Il est possible de debugger Weka avec Eclipse dans notre cas.  
+Il faut au préalable avoir installé [Eclipse](https://www.eclipse.org/downloads/) sur votre ordinateur.  
+Une fois lancé, faîtes "Open Projets from File System" :  
+![](https://lh3.googleusercontent.com/CJkqa1r161jvWqmg5_phJXVa818b1Ziej-0yh23kHwiBe6ThotVQMuJt07vvr2r-xQ9xR98JDKPYmjweQPNp=w1920-h947)  
+Puis sélectionnez le répertoire de Weka que vous avez extrait (`TEMP`) :  
+![](https://lh3.googleusercontent.com/5fq_FvoR6rQP4wVemjQqOWYgYauHw5k3oqHnI9Qxt7ZV9iH8e0OSi7kKQaQn8rzifxbt1G1g8jUVO4fhhIFQ=w1920-h435-rw)  
+Ouvrir le fichier `GUIChooser.java` depuis le paneau à gauche "Project Explorer". Le fichier se situe dans les dossiers :  
+  * src/main/java
+  * weka.gui
+Une fois sur cette classe, il est possible de lancer le debugger Eclipse.
+
+Pour la suite, il est possible de lancer le debugger depuis le fichier `ID3Modifie.java` (dans le dossier `src/main/java` puis `weka.classifiers.trees`), il suffit de s'assurer que le configuration est bien celle de GUIChooser
