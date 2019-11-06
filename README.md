@@ -17,17 +17,17 @@ J'ai donc utilisé ["Windows Subsystem for Linux"](https://en.wikipedia.org/wiki
 # 1 : Recompiler Weka :
 Il suffit d'utiliser ["ant"](https://ant.apache.org/ "Site officiel de \"ant\""). ant existe pour Windows 10 mais cette page ne parlera pas de l'installation de ant sous Windows.    
 #### ID3 n'est PAS de base dans Weka, il faut l'installer via le gestionnaire de paquets du logiciel :  
-![](https://lh4.googleusercontent.com/C4WsuqlwkA92Xddej4OL65I6leRZJWcTDo5jlf3MehVDv5CHgvXfLUYoMyyOq_SmBuerOqezbhSP24YxSBV9=w1920-h435)  
+![](images/weka_packetsManager.PNG "")  
 Le paquet à télécharger s'appelle 'simpleEducationalLearningSchemes' :  
-![](https://lh3.googleusercontent.com/2ZhWcNmuNWutdYELbm_OXHmtZ8RGilHOixZPT39wndiFixpwGzWceS_Q226HJB9cWLUrETveHa92NQIjxg8T=w1920-h435)  
+![](images/packageInstall.PNG "La barre de recherche peut aider")  
 Au prochain redémarrage de Weka, ID3 sera disponible dans Weka.  
 * Extrayez le contenu du fichier `weka-src.jar` (j'utilise [7zip](https://www.7-zip.org/)) par exemple dans un dossier `TEMP` (Ce sera le nom utilisé ici).  
-![fichier .jar](https://lh6.googleusercontent.com/x4SAbTeORvMp1Ow_FGh9BuTL_hTROsK52FPhp9XIFhM3czOAPfTWqyonHWeI3gPX0EkxxOrH7p6vwvroPLeY=w1920-h947-rw "weka-src.jar fichier")  
+![](images/weka-src.PNG "weka-src.jar fichier")  
 * Ensuite, déplacez (ou copiez) le fichier `ID3.java` du dossier  
 `C:\Users\"votre compte"\wekafiles\packages\simpleEducationalLearningSchemes\src\main\java\weka\classifiers\trees` vers le dossier d'installation de Weka (`D:\Program Files\Weka-3-8\weka-src\src\main\java\weka\classifiers\trees` chez moi).  
 Pensez à renommer le fichier dans le dossier de destination : Weka va déjà chercher un fichier appelé "ID3.java" lors de l'éxecution. S'il trouve deux fichiers du même nom, des conflits peuvent apparaître...  
 Le dossier `TEMP` contient une architecture de la sorte :  
-![Arborescence de résultat](https://lh3.googleusercontent.com/CTjIFSUDwrLAF8LAOZTfIa61HpjzVbJqYqUahHfmuDvoU4HYjPbuxJQsOxyDP20BfodU-M7XJnzF5D8XUPS4=w1920-h435)  
+![Arborescence de résultat](images/weka-extrait.PNG)  
 Le fichier à modifier (`ID3.java`) se trouve donc dans le dossier `src\main\java\weka\classifiers\trees` depuis ce répertoire.  
 La partie à modifier commence à la ligne 310 avec la fonction "computeEntropy" où l'entropie actuelle est celle de Shannon.  
 
@@ -41,7 +41,7 @@ Pour utiliser une commande bash depuis l'invite de commande Windows, il faut uti
 Comme présenté, WSL permet d'utiliser des commandes bash dans notre Windows sans machine virtuelle. WSL a toujours des limites par rapport à un vrai Ubuntu mais pour cet exercice, ça fera l'affaire.  
 Pour installer WLS, installez [l'article "Ubuntu"](https://www.microsoft.com/store/productId/9NBLGGH4MSV6) (différentes versions existent, j'ai installé la 18.04 mais peu importe). Il apparaitra dans votre Menu Démarrer mais pour l'instant Ubuntu n'est pas activé.  
 Pour se faire, il faut se rendre dans le panneau de configuration de Windows (Tapez "Panneau de Configuration" dans la barre de recherche Windows), puis dans "Programmes", puis dans "Activer ou désactiver les fonctionnalités Windows" :  
-![](https://lh4.googleusercontent.com/qZqnp4_h1gDj0VKOueY4cOibwan-ZZNskJvuf-nQBhlHyeeb3AIJd0sVcbg8a8q9whN2w-lvs42x7m24ZKbm=w1920-h947-rw)  
+![](images/WSLactivation.PNG)  
 Après ça, l'ordinateur demandera à redémarrer pour finaliser l'installation.
 Ensuite, ouvrez Ubuntu, répondez aux quelques questions (création de l'utilisateur Ubuntu : retenez le mot de passe, il vous permettra d'utiliser la commande `sudo`).  
 Un fois le compte créé, tapez les commandes :
@@ -58,9 +58,9 @@ Vous pouvez utiliser le petit script `run_weka.bat` à placer dans votre dossier
 Pour faciliter le développement, il est souvent utile d'avoir un debugger disponible. Il est possible de debugger Weka avec Eclipse dans notre cas.  
 Il faut au préalable avoir installé [Eclipse](https://www.eclipse.org/downloads/) sur votre ordinateur.  
 Une fois lancé, faîtes "Open Projets from File System" :  
-![](https://lh3.googleusercontent.com/CJkqa1r161jvWqmg5_phJXVa818b1Ziej-0yh23kHwiBe6ThotVQMuJt07vvr2r-xQ9xR98JDKPYmjweQPNp=w1920-h947)  
+![](images/openPRJ.PNG)  
 Puis sélectionnez le répertoire de Weka que vous avez extrait (`TEMP`) :  
-![](https://lh3.googleusercontent.com/5fq_FvoR6rQP4wVemjQqOWYgYauHw5k3oqHnI9Qxt7ZV9iH8e0OSi7kKQaQn8rzifxbt1G1g8jUVO4fhhIFQ=w1920-h435-rw)  
+![](images/selectPRJ.PNG)  
 Ouvrir le fichier `GUIChooser.java` depuis le paneau à gauche "Project Explorer". Le fichier se situe dans les dossiers :  
   * src/main/java
   * weka.gui
