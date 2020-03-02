@@ -49,7 +49,7 @@ Un fois le compte créé, tapez les commandes :
 * `sudo apt-get install defaultjdk ant`  
 
 Si tout s'est bien déroulé, ant est installé sur votre Ubuntu (et java qui est nécessaire pour la compilation).  
-Vous pouvez utiliser le petit script `run_weka.bat` à placer dans votre dossier `TEMP` pour automatiser la compilation :  
+Vous pouvez utiliser le petit script [`run_weka.bat`](run_weka.bat) à placer dans votre dossier `TEMP` pour automatiser la compilation :  
 * Il compile Weka
 * Arrête Weka s'il tournait déjà
 * Lance la nouvelle version de Weka  
