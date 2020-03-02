@@ -12,7 +12,7 @@ Pour modifier Weka (y ajouter un algorithme : un nouveau ID3), il faut le recomp
 J'ai donc utilisé ["Windows Subsystem for Linux"](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux "Wikipedia vers WSL") qui permet de bénéfier de "apt" avec une distro Ubuntu sous Windows 10.
 #### 1 : [Recompiler Weka](#1--recompiler-weka-)
 #### 2 : [Installer ant sous WSL](#2--installer-ant-sous-wsl-)
-#### 3 : Debugger Weka avec Eclipse
+#### 3 : [Debugger Weka avec Eclipse](#3--debugger-weka-avec-eclipse-1)
 
 # 1 : Recompiler Weka :
 Il suffit d'utiliser ["ant"](https://ant.apache.org/ "Site officiel de \"ant\""). ant existe pour Windows 10 mais cette page ne parlera pas de l'installation de ant sous Windows.    
